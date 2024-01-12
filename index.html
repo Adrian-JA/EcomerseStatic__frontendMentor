@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+        <title>Frontend Mentor | E-commerce product page</title>
+
+        <script defer src="script/app.js"></script>
+
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__items">
+                <img class="header__iconMenu" id="btnMenu" src="images/icon-menu.svg" alt="" />
+                <img class="header__title" src="images/logo.svg" />
+                <nav class="header__menu" id="menu">
+                    <img class="header__iconClose" id="btnCloseMenu" src="images/icon-close.svg" />
+                    <a class="headerLinks" href="#/collections">Collections</a>
+                    <a class="headerLinks" href="#/men">Men</a>
+                    <a class="headerLinks headerLinks--active" href="#/women">Women</a>
+                    <a class="headerLinks" href="#/about">About</a>
+                    <a class="headerLinks" href="#/contact">Contact</a>
+                </nav>
+            </div>
+            <div class="header__options">
+                <button class="headerBtn header__btnShop" id="btnCart">
+                    <img class="header__icon-cart" src="images/icon-cart.svg" /><span class="header__badge badge--hide" id="cartBadge"></span>
+                </button>
+                <button class="headerBtn header__btnProfile headerBtn--active" id="btnProfile"><img class="header__icon-profile" src="images/image-avatar.png" /></button>
+            </div>
+            <div class="cardShop cardShop--hide" id="cardShop">
+                <div class="cardShop__header">
+                    <p class="cardShop__title">Cart</p>
+                </div>
+                <div class="cardShop__body" id="cardShopBody">
+                    <p class="cardShop__textEmpty">Your cart is empty.</p>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="gallery" id="mainGallery">
+                <div class="gallery__headerContainer">
+                    <button class="gallery__btnMove gallery__btnMove--left"><img src="images/icon-previous.svg" /></button>
+                    <img class="gallery__headImage" src="images/image-product-1.jpg" alt="" data-list="1" />
+                    <button class="gallery__btnMove gallery__btnMove--right"><img src="images/icon-next.svg" alt="" /></button>
+                </div>
+
+                <div class="gallery__carrousel">
+                    <img class="gallery__image" src="images/image-product-2-thumbnail.jpg" alt="" />
+                    <img class="gallery__image" src="images/image-product-1-thumbnail.jpg" alt="" />
+                    <img class="gallery__image" src="images/image-product-3-thumbnail.jpg" alt="" />
+                    <img class="gallery__image" src="images/image-product-4-thumbnail.jpg" alt="" />
+                </div>
+            </div>
+            <div class="main__content">
+                <p class="main__productCompany">SNEAKER COMPANY</p>
+
+                <h2 class="main__productTitle">Fall Limited Edition Sneakers</h2>
+
+                <p class="main__productInfo">
+                    these low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer
+                </p>
+
+                <div class="main__priceInfo">
+                    <p class="main__productPrice">$125.00 <span class="main__productDiscount">50%</span></p>
+                    <p class="main__productPreviousPrice">$250.00</p>
+                </div>
+
+                <div class="main__buttons">
+                    <div class="main__amountOptions">
+                        <button class="btnEditAmount main__btnReduce" id="btnReduce">
+                            <img src="images/icon-minus.svg" alt="" />
+                        </button>
+                        <p class="main__amount" id="productQuantity">0</p>
+                        <button class="btnEditAmount main__btnIcrease" id="btnIncrease">
+                            <img src="images/icon-plus.svg" alt="" />
+                        </button>
+                    </div>
+
+                    <button class="main__btnConfirm" id="btnConfirmPurchase">
+                        <img class="btnIconCart" src="images/icon-cart.svg" alt="" />
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+            <dialog class="main__lightbox" id="modalGallery">
+                <div class="main__lightboxBody">
+                    <div class="gallery gallery--width">
+                        <div class="gallery__close">
+                            <button class="main__lightboxClose" id="btnModalClose">
+                                <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                                        fill="#69707D"
+                                        fill-rule="evenodd"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="gallery__headerContainer">
+                            <button class="gallery__btnMove gallery__btnMove--left btnLightbox"><img src="images/icon-previous.svg" /></button>
+                            <img class="gallery__headImage" src="images/image-product-1.jpg" alt="" data-list="1" />
+                            <button class="gallery__btnMove gallery__btnMove--right btnLightbox"><img src="images/icon-next.svg" alt="" /></button>
+                        </div>
+
+                        <div class="gallery__carrousel gallery__carrousel--width">
+                            <img class="gallery__image" src="images/image-product-2-thumbnail.jpg" alt="" />
+                            <img class="gallery__image" src="images/image-product-1-thumbnail.jpg" alt="" />
+                            <img class="gallery__image" src="images/image-product-3-thumbnail.jpg" alt="" />
+                            <img class="gallery__image" src="images/image-product-4-thumbnail.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+        </main>
+    </body>
+</html>
